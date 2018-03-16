@@ -1,0 +1,114 @@
+header
+  position relative
+  &.spacer
+    padding-top 45px
+
+main
+  display flex
+  position relative
+  width 90vw
+  max-width 1200px
+  margin 0 auto
+  padding 50px 0
+  .content
+    width 100%
+
+
+// ---- CONTAINERS ---- //
+// div.small,
+// .row
+//   display flex
+//   flex-wrap wrap
+//   > *
+//     flex-basis 100%
+
+// div.small
+//   width 400px
+//   margin auto
+//   padding 20px
+
+
+// ---- FUNCTIONS ---- //
+.hidden
+  display none !important
+
+
+// ---- COLORS ---- //
+// Spacing
+.panel
+  h1, h2, h3, h4, h5, h6, p
+    &:first-child
+      margin-top 0
+    &:last-child
+      margin-bottom 0
+
+// Background
+.panel
+  width 100%
+  padding 50px 0
+  &.blue
+    background-color $blue
+  &.darkblue
+    background-color $darkestblue
+  &.red
+    background-color $lightestred
+  &.darkred
+    background-color $red
+  &.tan,
+  &.gray
+    background-color $lightesttan
+  &.black
+    background-color #444
+
+// Panels
+.panel
+  &.tan
+    .upsells,
+    .related
+      h2
+        color $darkesttan
+  &.blue,
+  &.darkblue,
+  &.darkred,
+  &.black
+    .upsells,
+    .related
+      h2
+        color $lightesttan
+
+
+// ---- TYPE ---- //
+.block
+  display block !important
+
+
+// ---- ALIGNMENT ---- //
+// Vertical
+.baseline
+  display flex
+  align-items baseline
+.vcenter
+  display flex
+  align-items center
+.baseline,
+.vcenter
+  > p
+    margin 0
+    line-height 1
+
+// Horizontal
+.spread
+  display flex
+  width 100%
+  justify-content space-between !important
+.hcenter
+  display flex
+  width 100%
+  justify-content center !important
+.tcenter
+  width 100%
+  text-align center !important
+.mcenter
+  display block !important
+  margin-left auto !important
+  margin-right auto !important

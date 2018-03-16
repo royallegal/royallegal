@@ -1,0 +1,25 @@
+.blog main
+  display flex
+  justify-content center
+
+  article
+    &:first-child
+      margin-top 0
+
+
+main
+  hr:last-child
+    display none
+  a.read-more
+    margin auto
+    padding 5px 12px
+    border 2px solid $blue
+    border-radius 2px
+    font-size .9em
+    font-weight 600
+    color $blue
+    transition .075s ease-in-out
+    &:hover
+      border-color $linkhighlight
+      background-color $linkhighlight
+      color white

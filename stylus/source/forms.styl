@@ -1,0 +1,60 @@
+// ---- LAYOUT ---- //
+form,
+.form
+  .section,
+  &.section
+    margin 0 0 75px
+    &:last-of-type
+      margin-bottom 0
+
+  .row,
+  &.row
+    margin 0 0 25px
+    &:last-of-type
+      margin-bottom 0
+    &.gray
+      padding 25px
+      border 1px solid $lightergray
+      border-radius 3px
+      background-color $lightestgray
+
+  // Single Column
+  > div:not(.column)
+    input[type=text],
+	input[type=email],
+    textarea,
+    select
+      width 100%
+  .column
+    display flex
+    &.double
+      input[type="text"],
+      textarea,
+      select
+        width calc(50% - 15px)
+        margin-right 15px
+      input[type="text"]:last-of-type
+        width 50%
+        margin-right 0
+    &.triple
+      input,
+      textarea,
+      select
+        width calc(33.3% - 15px)
+        margin-right 15px
+      input:last-of-type
+        width 33.3%
+        margin-right 0
+      span
+        margin-right 10px
+        &:last-of-type
+          margin-right 0
+
+  > div
+    h3,
+    h4
+      margin-top 0
+      cursor default
+
+    p
+      cursor default

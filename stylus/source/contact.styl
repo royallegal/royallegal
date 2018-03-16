@@ -1,0 +1,183 @@
+.page-template-contact
+  main
+    flex-wrap wrap
+    width 100%
+    max-width 100%
+    background-image url('/wp-content/uploads/2017/06/Fotolia_61056916_L.jpg')
+    background-size cover
+    .mask
+      position absolute
+      top 0
+      bottom 0
+      left 0
+      right 0
+      background-color rgb(39, 61, 79)
+      opacity .85
+
+    // hr
+    //   z-index 1
+    //   width 90%
+    //   max-width 600px
+    //   margin 25px auto 50px
+
+    .info
+      z-index 1
+      display flex
+      align-items flex-start
+      justify-content space-between
+      margin auto
+
+      .title-group
+        .title,
+        .description
+          color white
+        .title
+          margin-top 0
+        .description
+          margin-bottom 0
+
+      address
+        margin-top 25px
+        padding 15px
+        border 1px solid #eee
+        background-color rgba(255,255,255,.15)
+        .location
+          margin-bottom 15px
+        h4,
+        span,
+        a,
+        p
+          margin 0
+          font-size .95em
+          font-style normal
+          color white
+          line-height 1.75
+          letter-spacing .5px
+        a
+          font-weight bold
+          &:hover
+            text-decoration underline
+
+      .form-area
+        background-color $lightestgray
+        > p
+          margin 0
+          select
+            width 100%
+        .ajax-loader
+          display none
+        input:not([type="checkbox"]):not([type="submit"]),
+        select,
+        textarea
+          box-sizing border-box
+          width 100%
+          margin 5px 0
+        .button
+          width 100%
+          margin 40px 0 5px
+        textarea
+          resize none
+        .acceptance
+          font-size .75em
+          color gray
+          span
+            margin 0
+        .opt-out
+          .wpcf7-list-item-label
+            cursor default
+        .disclaimer
+          margin 0
+          font-size .75em
+          color gray
+        .wpcf7-validation-errors,
+        .wpcf7-mail-sent-ok
+          margin 15px 0 0
+          padding 10px
+          border 1px solid
+          font-size .75em
+          line-height 1.5
+        .wpcf7-mail-sent-ok
+          border-color mediumseagreen
+          background-color #baf9c7
+        .wpcf7-validation-errors
+          border-color orange
+          background-color lightgoldenrodyellow
+        .wpcf7-not-valid-tip
+          display block
+          margin-bottom 10px
+          font-size .75em
+          color red
+
+        h4,
+        p,
+        h4
+          margin 0 0 5px
+          &:not(:first-of-type)
+            margin-top 10px
+        p
+          margin 5px 0 0
+
+        #target
+          #contact-form,
+          #consultation-form,
+          #webinar-form
+            display none
+          #consultation-form,
+          #webinar-form
+            hr
+              margin-bottom 15px
+
+
+@media screen and (min-width ($laptop+1))
+  .page-template-contact
+    main
+      .info
+        justify-content center
+        flex-wrap nowrap
+        width 90%
+        max-width 1200px
+        margin auto
+      .title-group
+         max-width 450px
+         margin-right 50px
+      .form-area
+         flex-basis calc(50% - 50px)
+         flex-shrink 0
+         padding 50px
+         border-radius 5px
+
+@media screen and (max-width $laptop)
+  .page-template-contact
+    main
+      padding 0
+      .info
+        flex-wrap wrap
+        width 100%
+        .title-group
+          width 90%
+          margin 2.5vw auto
+          padding 2.5vw 0
+          address
+            max-width 450px
+            margin-top 25px
+      .form-area
+        flex-basis 100%
+        form
+          max-width 480px
+          margin auto
+
+@media screen and (min-width ($phablet+1)) and (max-width $laptop)
+  .page-template-contact
+    main
+      .form-area
+        padding 50px
+
+@media screen and (max-width $phablet)
+  .page-template-contact
+    main
+      .form-area
+        padding 5vw
+
+
+.screen-reader-response
+  display none

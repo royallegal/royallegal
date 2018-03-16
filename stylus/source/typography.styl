@@ -1,0 +1,123 @@
+// ---- FONT FAMILIES ---- //
+body
+  font-family 'Lato', Arial, sans-serif
+
+
+// ---- FONTS ---- //
+// Allura
+@font-face
+  font-family 'Allura'
+  font-weight normal
+  src url('../fonts/AlluraRegular.eot')
+  src url('../fonts/AlluraRegular.eot') format('embedded-opentype'),
+     url('../fonts/AlluraRegular.woff') format('woff'),
+     url('../fonts/AlluraRegular.ttf') format('truetype'),
+     url('../fonts/AlluraRegular.svg#AlluraRegular') format('svg')
+
+// Lato
+@font-face
+  font-family 'Lato'
+  font-weight 100
+  src url('../fonts/Lato-Light.ttf') format('truetype')
+@font-face
+  font-family 'Lato'
+  font-weight 400
+  src url('../fonts/Lato-Regular.ttf') format('truetype')
+@font-face
+  font-family 'Lato'
+  font-style italic
+  font-weight 400
+  src url('../fonts/Lato-Italic.ttf') format('truetype')
+@font-face
+  font-family 'Lato'
+  font-weight 700
+  src url('../fonts/Lato-Bold.ttf') format('truetype')
+@font-face
+  font-family 'Lato'
+  font-weight 900
+  src url('../fonts/Lato-Black.ttf') format('truetype')
+
+// LibreBaskerville
+@font-face
+  font-family 'LibreBaskerville'
+  font-weight 400
+  src url('../fonts/LibreBaskerville-Regular.ttf') format('truetype')
+@font-face
+  font-family 'LibreBaskerville'
+  font-style italic
+  font-weight 400
+  src url('../fonts/LibreBaskerville-Italic.ttf') format('truetype')
+@font-face
+  font-family 'LibreBaskerville'
+  font-weight 700
+  src url('../fonts/LibreBaskerville-Bold.ttf') format('truetype')
+
+
+// ---- SIZES ---- //
+body
+  font-size 18px
+p
+  font-size 1em
+// h1
+//   font-size 3em
+h2
+  font-size 1.67em
+h3
+  font-size 1.33em
+h4
+  font-size 1.05em
+h5, h6
+  font-size 1em
+
+
+// ---- SPACING ---- //
+p
+  margin 0 0 1.5em
+  line-height 1.9
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  line-height 1.5
+h1,
+h2
+  margin .75em 0
+h3
+  margin 1.5em 0 .75em
+h4
+  margin 1.25em 0 .5em
+
+
+// ---- WEIGHT ---- //
+h1,
+h2
+  font-weight 900
+h3,
+h4
+  font-weight 700
+
+
+// ---- COLORS ---- //
+a
+  color $lightblue
+  text-decoration none
+  &:hover
+    color $linkhighlight
+
+
+// ---- APPEARANCE ---- //
+h1
+  text-transform uppercase
+h2,
+h3,
+h5
+  text-transform capitalize
+
+
+// ---- STYLES ---- //
+p
+  &.description
+    font-size 17px
+    color #999

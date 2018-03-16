@@ -1,0 +1,359 @@
+.woocommerce-account
+  main.account
+    justify-content center
+    .woocommerce
+      width 600px
+      h3
+        margin 0
+        font-size 1.4em
+        font-weight normal
+        line-height 1
+
+
+// ---- LOGIN ---- //
+.page-id-545
+  .flip
+    height 465px
+#login,
+#register
+  h3
+    margin 0 0 25px
+  p
+    margin 10px 0 0
+    line-height 1
+  .password-reset,
+  [data-id="register"],
+  [data-id="login"]
+    cursor pointer
+  [data-id="register"]
+    color $lightblue
+    &:hover
+      color $linkhighlight
+
+
+// ---- BANNER ---- //
+.woocommerce-account
+  .account.banner
+    padding 25px 0
+    background-color $lightestgray
+    .container
+      display flex
+      justify-content space-between
+      width 90vw
+      margin 0 auto
+      max-width 1000px
+
+      // Circle
+      .user.section
+        display flex
+        align-items center
+      .circle
+        display flex
+        align-items center
+        justify-content center
+        height 80px
+        width 80px
+        border-radius 100%
+        background-color $linkhighlight
+        p
+          margin 0
+          font-size 1.75em
+          color white
+          letter-spacing 3px
+      p.heading
+        margin 0 0 0 15px
+        font-size 1.25em
+        font-weight 600
+        line-height 1.25
+
+      // Content
+      p.title
+        margin 0
+        font-size .75em
+        font-weight 600
+        color #aaa
+        text-transform uppercase
+        line-height 1
+      p.status
+        margin 15px 0
+        font-size 1.5em
+        line-height 1
+      p.upsell
+        margin 0
+        font-size .8em
+        font-weight 600
+        color $lightblue
+        line-height 1
+        &:hover
+          color $linkhighlight
+
+
+// ---- SIDEBAR ---- //
+.woocommerce-account
+  sidebar.account
+    width 150px
+    margin-left 0
+    p
+      width 150px
+      margin 0
+      padding 4px 11px
+      border 1px solid transparent
+      font-size .9em
+      color black
+      &.is-active,
+      &:hover
+        border-color $lightergray
+        background-color $lightestgray
+
+
+// ---- TAGS ---- //
+.account
+  .tags
+    .grid
+      display flex
+      justify-content space-between
+      flex-wrap wrap
+    .tag
+      position relative
+      height 75px
+      width calc(50% - 5px)
+      margin-bottom 10px
+      border 1px solid #ddd
+      border-radius 3px
+      box-shadow 0 1px 3px #e5e5e5
+      cursor default
+      overflow hidden
+      &:first-child
+        margin-right 10px
+
+      .front
+        display flex
+        align-items center
+        height 100%
+        .circle
+          display flex
+          align-items center
+          justify-content center
+          flex-shrink 0
+          height 100%
+          width 75px
+          margin-right 15px
+          border-right 1px solid #ddd
+          background-color $lightestgray
+          p
+            margin 0
+            font-size 1.5em
+            font-weight 300
+            color #444
+            text-transform uppercase
+            letter-spacing -2px
+        .title-group
+          h4
+            font-weight normal
+            margin 0
+          .description
+            margin 0
+            line-height 1
+        .fa-cog
+          display none
+          position absolute
+          top 2px
+          right -6px
+          padding 10px
+          color #aaa
+          transition .075 ease-in-out
+          cursor pointer
+          &:hover
+            color $linkhighlight
+        &:hover
+          .fa-cog
+            display block
+
+      .back
+        display none
+        align-items center
+        justify-content center
+        position absolute
+        top 0
+        bottom 0
+        left 0
+        right 0
+        background-color $linkhighlight
+        transition .15s ease-in-out
+        p
+          display inline-block
+          margin 0
+          font-size 1.1em
+          color white
+          cursor pointer
+          user-select none
+          &:hover
+            text-decoration underline
+          &:first-child
+            margin-right 15px
+          &:last-child
+            margin-left 15px
+      &:hover .back
+        display flex
+
+
+// ---- FORMS ---- //
+// Address
+form
+  #address
+    .ship-address
+    [name="ship-address2"]
+      width 100%
+      margin 5px 0
+    .location
+      display flex
+      overflow hidden
+      .ship-address
+        width 33%
+        margin-right 7.5px
+        &:last-of-type
+          margin-right 0
+
+// Relationship (initial setup for owner)
+form[name="profiles"]
+  .disabled
+    background-color #f8f8f8
+    color #aaa
+
+
+// ---- EXPORTS ---- //
+table#exports
+  width 100%
+  border-collapse collapse
+  font-size .9em
+
+  th
+    text-align left
+    padding 8px 12px
+    border-bottom 1px solid #aaa
+    color #999
+    cursor default
+    &.checkbox
+      padding 8px 0
+      div
+        padding 8px 12px
+        border 1px solid $lightergray
+        border-radius 5px
+        background-color $lightestgray
+        input
+          margin auto
+
+    .fa-sort
+      margin-left 8px
+      cursor pointer
+    .search
+      .fa-search
+        margin-right 8px
+        cursor pointer
+      input
+        max-width 60px
+        padding 0
+        border-color transparent
+        font-size .9em
+        font-weight bold
+
+  tbody
+    tr
+      border-top 1px solid #ddd
+      border-bottom 1px solid #ddd
+      &:hover
+        background-color #f8f8f8
+      td
+        padding 8px 12px
+        white-space nowrap
+        cursor default
+
+        &.activity
+          min-widt 80px
+
+        &.status
+          text-align center
+          position relative
+          transition .15s
+          transition-delay .25s
+          // &.pointer
+          //   cursor pointer
+          &:hover ul.tooltip
+            display block
+          p
+            margin 0
+          ul.tooltip
+            z-index 100
+            display none
+            position absolute
+            top 40px
+            right 50%
+            padding 5px 10px
+            box-shadow 0 2px 5px rgba(0,0,0,.25)
+            background white
+            li
+              display flex
+              align-items baseline
+              justify-content flex-start
+              text-align center
+              padding 0 10px
+              font-size .85em
+              list-style none
+              &.heading
+                padding 10px 25px
+                border-bottom 2px solid $lightergray
+                color #999
+              &.complete
+                i
+                  color $green
+              &.incomplete
+                i
+                  color $lightred
+
+        &.settings
+          position relative
+          width 80px
+          padding 8px 2.5px
+          button
+            margin-left 17px
+            padding 8px 12px
+            i
+              margin 0
+            &.text
+              margin 0
+              padding 0
+          .dropdown.menu
+            left -81px
+            li
+              i
+                margin-right 8px
+          
+        input
+          margin auto
+
+
+
+// ---- PURCHASES ---- //
+.woocommerce-account
+  .subscriptions
+  .purchases
+    .gallery
+      display flex
+      align-content flex-start
+      flex-wrap wrap
+      margin 0 -15px
+      li
+        margin 25px 15px 0
+        list-style none
+        img
+          height 150px
+          width 150px
+          margin 0 auto
+        h2
+          text-align center
+          margin 5px 0 0
+          font-size 1em
+          font-weight bold
+        .price,
+        .button
+          display none

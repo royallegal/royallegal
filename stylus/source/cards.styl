@@ -1,0 +1,51 @@
+.card
+  max-width 450px
+  margin auto
+  padding 35px
+  border 2px solid #eee
+  border-radius 3px
+
+  &.blue
+    border-color #4077a0
+    background-color #4077a0
+    h3,
+    h4,
+    p,
+    a
+      color white
+    a:hover
+      color #eee
+    .button
+      background-color white
+      font-weight bold
+      color $blue
+      &:hover
+        background-color #eee
+
+
+// ---- FLIP ---- //
+.flip
+  perspective 1000px
+
+  // Rotation Axis
+  .flipper
+    position relative
+    transition .6s
+    transform-style preserve-3d
+    &.rotate
+      transform rotateY(180deg)
+
+  // Card Faces
+  .front,
+  .back
+    position absolute
+    top 0
+    left 0
+    right 0
+    width 100%
+    backface-visibility hidden
+  .front
+    z-index 2
+    transform rotateY(0deg)
+  .back
+    transform rotateY(180deg)

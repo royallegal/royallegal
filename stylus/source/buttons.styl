@@ -1,0 +1,113 @@
+// ---- BUTTON GROUP ---- //
+.button-group
+  display flex
+  align-items center
+  &.center
+    justify-content center
+  .button,
+  button
+    margin 0 2px
+    &:first-child
+      margin-left 0
+    &:last-child
+      margin-right 0
+
+
+// ---- BUTTONS ---- //
+.button,
+button
+  padding 8px 20px
+  outline none
+  border 2px solid transparent
+  background-color $blue
+  font-weight 500
+  color white
+  text-align center
+  text-transform capitalize
+  text-decoration none
+  line-height 1
+  cursor pointer
+  user-select none
+  transition .1s ease-in-out
+  &:hover
+    border-color transparent
+    background-color $linkhighlight
+    color white
+
+
+// Sizes
+.button,
+button
+  &.small
+    padding 8px 15px
+    font-size .9em
+
+// Styles
+.hero
+  .button,
+  button
+    box-shadow 0 1px 3px rgba(0,0,0,0.25), 0 3px 15px rgba(0,0,0,.15)
+    .ghost
+      text-shadow 0 0 1px rgba(0,0,0,.15)
+
+// Types
+.button,
+button
+  &.close
+    background-color none
+    border-color none
+    font-size 18px
+    font-weight 900
+
+  &.ghost
+    border-color white
+    background-color transparent
+    &:hover
+      background-color white
+      color $lightblue
+
+  &.gray
+    border-color $lightergray
+    background-color $lightestgray
+    color #aaa
+    &:hover
+      border-color $linkhighlight
+      background-color $linkhighlight
+      color white
+
+  &.orange
+    border-color $orange
+    background-color $orange
+    color white
+    &:hover
+      border-color  $darkestorange
+      background-color  $darkestorange
+
+.button,
+button
+  &.border
+    &.blue
+      background-color transparent
+      color $blue
+      &:hover
+        background-color $linkhighlight
+        color white
+  &.borderless
+    &.ghost
+      border-color transparent
+      &:hover
+        border-color transparent
+
+
+.button
+  &.text
+    padding 0
+    outline none
+    border none
+    background-color transparent
+    color inherit
+    text-decoration none
+    line-height 1
+    cursor pointer
+    user-select none
+    transition .1s ease-in-out

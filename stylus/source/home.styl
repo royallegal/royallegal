@@ -1,0 +1,80 @@
+// ---- NAV ---- //
+// @media screen and (min-width $tablet+1)
+nav.transparent
+  background-color transparent
+  .menu
+    > .item
+      p,
+      i,
+      a
+        color #c6d1d8
+      &:not(.login-status):hover
+        p,
+        i,
+        a
+          color white
+      &.login-status
+        .greeting.baseline:hover
+          p,
+          i
+            color white
+        .logout:hover
+          a
+            color white
+    .cta.item
+      p
+        border-color #c6d1d8    
+      &:not(.login-status):hover
+        p
+          border-color $linkhighlight
+  .logo
+    background-image url('/wp-content/uploads/2017/05/Layer-2.png')
+
+
+// ---- HERO ---- //
+.home
+  .video-group
+    .mask
+      z-index 1000
+      display none
+      position fixed
+      top 0
+      bottom 0
+      left 0
+      right 0
+      background-color rgba(0,0,0,.25)
+    .video.player
+      z-index 1000
+      position fixed
+      top 50%
+      left 50%
+      height 0px
+      max-height 90vh
+      width 0px
+      max-width 90vw
+      box-shadow 0 3px 50px 10px rgba(0,0,0,.5)
+      transform translateX(-50%) translateY(-50%)
+      &.hidden
+        display none
+  .button-group
+    .button
+      margin 4px
+      border-radius 50px
+
+@media screen and (min-width $tablet)
+  .home .hero
+    height 65vh
+@media screen and (max-width $tablet - 1)
+  .home .hero
+    height 100vh
+
+@media screen and (orientation: landscape)
+  .home
+    .hero
+      background-size 165% auto
+      background-position 25% 40%
+@media screen and (orientation: portrait)
+  .home
+    .hero
+      background-size cover
+      background-position center top

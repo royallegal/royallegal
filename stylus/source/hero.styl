@@ -1,0 +1,160 @@
+// ---- POSITIONGING ---- //
+.hero
+  display flex
+  align-items center
+  align-content center
+  justify-content center
+  flex-wrap wrap
+  position relative
+  height 30vh
+  padding-top 45px
+  .title,
+  .subtitle,
+  .button-group
+    flex-basis 100%
+  .title-group,
+  .button-group
+    z-index 1
+
+@media screen and (max-width $iPhone6Plus)
+  .hero
+    .button
+      display block
+
+
+// ---- MASK ---- //
+.hero
+  .mask
+    position absolute
+    top 0
+    bottom 0
+    left 0
+    right 0
+    background-color $darkestblue
+    opacity .6
+
+
+// ---- TITLE ---- //
+.hero
+  .title-group
+    max-width 90vw
+    margin 0 0 15px
+    .title,
+    .subtitle
+      color white
+      text-align center
+      text-transform none
+      text-shadow 0 1px 3px rgba(0,0,0,0.5), 0 3px 15px rgba(0,0,0,.25)
+      letter-spacing 1px
+    .title
+      margin 0
+      font-weight 900
+      font-variant small-caps
+      line-height 1
+    .subtitle
+      margin 0
+      font-weight 600
+
+@media screen and (min-width $iPhone6Plus + 1)
+  .hero
+    .title-group
+      margin 0 0 40px
+@media screen and (max-width $iPhone6Plus)
+  .hero
+    .title-group
+      margin 0 0 20px
+
+@media screen and (min-width $laptop)
+  .hero
+    .title-group
+      .title
+        font-size 3.75rem
+      .subtitle
+        font-size 2rem
+@media screen and (min-width $tablet) and (max-width $laptop - 1)
+  .hero
+    .title-group
+      .title
+        font-size 3.5rem
+      .subtitle
+        font-size 1.75rem
+@media screen and (max-width $mobile)
+  .hero
+    .title-group
+      .subtitle
+        margin-top 10px
+@media screen and (min-width $iPhone6 + 1) and (max-width $tablet - 1)
+  .hero
+    .title-group
+      .title
+        font-size 3rem
+      .subtitle
+        font-size 1.5rem
+@media screen and (max-width $iPhone6)
+  .hero
+    .title-group
+      .title
+        font-size 2.5rem
+      .subtitle
+        font-size 1.25rem
+
+
+// ---- IMAGES ---- //
+.hero
+  background-size cover
+  background-position center
+  background-repeat no-repeat
+
+// Parallaxx
+@media screen and (max-width $phablet)
+  .parallax.hero
+    background-attachment fixed
+
+
+// ---- VIDEO ---- //
+.video.popup.player
+  z-index 1000
+  display flex
+  align-items center
+  justify-content center
+  position fixed
+  top 0
+  bottom 0
+  left 0
+  right 0
+  .background
+    z-index -1
+    position absolute
+    height 100%
+    width 100%
+    background-color rgba(0,0,0,.5)
+  video,
+  iframe
+    height 42.5vw
+    width 75vw
+    border 1px solid #555
+    box-shadow 0 3px 20px 5px rgba(0,0,0,.35)
+
+
+// ---- MAP ---- //
+.hero
+  .map
+    height 100%
+    width 100%
+
+// ---- BUTTONS ---- //
+@media screen and (max-width $iPhone6Plus)
+  .hero
+    .button-group
+      .button
+        border-radius 0
+        &:first-child
+          margin-right 0
+          border 0
+          box-shadow none
+        &:last-child
+          position absolute
+          bottom 0
+          left 0
+          right 0
+          margin-left 0

@@ -1,0 +1,281 @@
+// ---- PURCHASING VISIBILITY ---- //
+body:not(.admin-bar)
+  main.product-container
+    .summary.entry-summary
+      display none
+
+
+// ---- PAGE LAYOUT ---- //
+main.product-container
+  width 100%
+  max-width 100%
+  padding 0
+  .content
+    .description
+      margin-top 50px
+      > article
+        margin-bottom 50px
+      h2
+        text-align center
+        margin 0
+  div.product,
+  .woocommerce-tabs,
+  .upsells,
+  .related
+    max-width 90vw
+    margin 0 auto
+  .woocommerce-tabs,
+  .upsells
+    width 750px
+  .related
+    width 900px
+
+
+// ---- PRODUCT ---- //
+main.product-container div.product
+  display flex
+  justify-content center
+
+
+// ---- TITLES ---- //
+main.product-container
+  div.product h1,
+  .woocommerce-tabs h2,
+  .upsells h2,
+  .related h2
+    padding 0
+    font-weight bold
+  div.product
+    .product_title
+      margin 0 0 5px
+    h1
+      font-size 1.5em
+  .woocommerce-tabs h2,
+  .upsells h2,
+  .related h2
+    text-align center
+    font-size 1.25em
+
+
+//  Products
+  .woocommerce-page ul.products li.product
+    margin 0
+
+
+// ---- IMAGES ---- //
+.product-container .product.type-product
+  .images-container
+    width 250px
+
+    // Featured Image
+    img
+      margin 0 !important
+      &.featured
+        height 250px
+        width 250px
+        border 1px solid #d5d5d5
+        object-fit contain
+        object-position center
+
+    // Gallery Slider
+    .slider
+      display flex
+      align-items center
+      .prev,
+      .next
+        height 10px
+        width 10px
+        border-top 2px solid #aaa
+        cursor pointer
+      .prev
+        border-left 2px solid #aaa
+        transform rotate(-45deg)
+      .next
+        border-right 2px solid #aaa
+        transform rotate(45deg)
+
+    // Gallery Images
+    .woocommerce-product-gallery
+      width 250px !important
+      margin 0
+      margin-right 10px
+      figure
+        height 55px
+        width 220px
+        margin 0 auto
+        white-space nowrap
+        overflow hidden
+        div
+          display inline-block
+          width 50px !important
+          margin 2.5px
+          filter grayscale(1)
+          &:hover,
+          &.is-featured
+            filter grayscale(0)
+            img
+              box-shadow 0 0 0 1px cornflowerblue
+          img
+            height 50px
+            width 50px
+            object-fit cover
+            object-position center
+
+
+// ---- SUMMARY ---- //
+.product-container .product.type-product
+  .summary
+    width auto !important
+    margin auto 0
+    margin-left 25px
+    .variations
+      .label,
+      .value
+        display block
+        font-weight bold
+      .label
+        margin-bottom 5px
+      .value
+        margin-bottom 15px
+    .price
+      margin-top 0
+      padding 0
+      font-size 1.15em
+      font-weight 500
+      color #444
+    .quantity.hidden,
+    .apple-pay-button-wrapper
+      display none
+    button[type="submit"]
+      background-color #ff8c00
+      color white
+      &:hover
+        background-color #ff6900
+    .product_meta
+      display flex
+      flex-wrap wrap
+      font-size .9em
+      color gray
+      span
+        flex-basis 100%
+        margin 10px 0
+        a
+          padding 3px 8px
+          border-radius 5px
+          background-color $lightestblue
+          color white
+          text-transform uppercase
+          text-decoration none
+          transition .1s ease-in-out
+          &:hover
+            background-color $darkblue
+
+// ---- TEXT AREA ---- //
+.product-container .tabs
+  display none
+#tab-description p
+  margin-top 5px !important
+
+
+// ---- ADDITIONAL PRODUCTS ---- //
+// All
+.woocommerce
+  #category,
+  .product-container
+    ul.products
+      display flex
+      max-width 1200px
+      margin 0 auto
+      padding 0
+      li
+        padding 0
+        list-style none
+        h2,
+        .price,
+        .add_to_cart_button
+          display none
+
+// Related
+.woocommerce #category
+  ul.products
+    flex-wrap wrap
+    li
+      margin 10px
+      // h2
+      //   text-align center
+      //   margin 10px 0 0
+      //   font-size 1.25em
+      //   font-weight bold
+      //   color #333
+      //   text-transform none
+      article
+        padding 0
+
+// Related
+.woocommerce .product-container
+  .related
+    display flex
+    justify-content center
+    flex-wrap wrap
+    ul.products
+      li
+        margin 0 2.5px
+
+// Upsells
+.woocommerce .product-container
+  .upsells
+    ul.products
+      justify-content center
+      li
+        float none
+        width auto
+        img
+          height 250px
+          width 250px
+          max-width none
+          margin auto
+
+
+// ---- MEMBERSHIPS ---- //
+.cd-products-wrapper
+  overflow-x: auto;
+  /* this fixes the buggy scrolling on webkit browsers - mobile devices only - when overflow property is applied */
+  -webkit-overflow-scrolling: touch;
+.cd-products-table
+  .features
+    /* fixed left column - product properties list */
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 120px;
+.cd-products-columns
+  /* products list wrapper */
+  width: 1200px; /* single column width * products number */
+  margin-left: 120px; /* .features width */
+
+@media only screen and (min-width: 1170px)
+  .cd-products-table.top-fixed
+    .cd-products-columns
+      > li
+        padding-top: 160px;
+    .top-info
+      height: 160px;
+      position: fixed;
+      top: 0;
+      h3
+        transform: translateY(-116px);
+      img
+        transform: translateY(-62px) scale(0.4);
+
+
+
+
+.product-container
+  .woocommerce-info
+    text-align center
+    padding 15px 0
+    background-color $logoblue
+    font-weight bold
+    color white
+    letter-spacing .5px

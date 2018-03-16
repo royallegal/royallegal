@@ -1,0 +1,54 @@
+.newsletter
+  position relative
+
+
+// ---- COLORS ---- //
+.newsletter
+  &.blue
+    background-color #4077a0
+    *
+      color white
+
+
+// ---- BANNERS ---- //
+.newsletter
+  &.banner
+    display flex
+    align-items center
+    justify-content center
+    flex-wrap wrap
+    width 100%
+    > *
+      flex-basis 100%
+    .close
+      position absolute
+      top 12px
+      right 10px
+    form
+      max-width 650px
+      margin auto
+
+
+// ---- SIDEBAR ---- //
+.widget
+  // Email Only
+  #mc-embedded-subscribe-form
+    .background
+      input
+        box-sizing border-box
+        width 100%
+        margin 2.5px 0
+    .responses
+      margin-top 15px
+      #mce-error-response,
+      #mce-success-response
+        padding 10px
+        border 1px solid
+        font-size .9em
+        line-height 1.5
+      #mce-error-response
+        border-color orange
+        background-color lightgoldenrodyellow
+      #mce-success-response
+        border-color mediumseagreen
+        background-color #baf9c7

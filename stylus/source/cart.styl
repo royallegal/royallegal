@@ -1,0 +1,164 @@
+// ---- NOTE ---- //
+// This file contains CSS for the full checkout process,
+// including cart, checkout, payment, etc...
+
+
+// ---- LAYOUT ---- //
+main.checkout
+  .woocommerce
+    margin 0 auto
+
+  .details
+    .row
+      display flex
+      align-items center
+
+
+// ---- CART ---- //
+main.checkout
+  // Products
+  .product
+    display flex
+    position relative
+    height 125px
+    width 450px
+    margin 25px 0
+    border 1px solid $lightgray
+    border-radius 3px
+    background-color $lightestgray
+    overflow hidden
+
+    .remove
+      position absolute
+      top 3px
+      right 8px
+      a
+        font-size .9em
+        color #aaa
+        &:hover
+          color $lightred
+
+    .image img
+      height 100%
+      width 125px
+
+    .details
+      padding 15px
+      .name
+        margin-bottom 8px
+        font-size 1.15em
+        font-weight bold
+        letter-spacing 1px
+
+      .quantity input
+        margin-bottom 8px
+
+      // .price
+      // .subtotal
+
+  // Checkout
+  .apple-pay-button-wrapper,
+  .apple-pay-button-checkout-separator
+    display none
+
+
+// ---- CHECKOUT ---- //
+main.checkout
+  .woocommerce-NoticeGroup.woocommerce-NoticeGroup-checkout,
+  #billing,
+  table.woocommerce-checkout-review-order-table,
+  #payment .container
+    width 600px
+    margin 0 0 25px
+    padding 25px
+    border 1px solid $lightergray
+    border-radius 3px
+    background-color $lightestgray
+
+  .woocommerce-NoticeGroup.woocommerce-NoticeGroup-checkout,
+  .woocommerce_error.woocommerce-error.wc-stripe-error,
+    border-color $lighterred
+    background-color $lightestred
+
+  #billing
+    label
+      margin 0 0 0.5em
+      font-size 1.05em
+      font-weight 700
+      text-transform capitalize
+      line-height 1.5
+      cursor default
+    abbr.required
+      display none
+
+  // Order Review (item totals)
+  table.woocommerce-checkout-review-order-table
+    thead
+      tr
+        th
+          text-align center
+          padding-bottom 15px
+    tbody
+      tr
+        background-color white
+        th,
+        td
+          &:first-child
+            text-align left
+          &:last-child
+            text-align right
+        td
+          padding 15px
+    tfoot
+      .cart-subtotal
+        display none
+      .order-total
+        th,
+        td
+          text-align right
+          padding 10px 15px 0 0
+
+  #payment
+    ul
+      margin 0
+      padding 0
+      li
+        display flex
+        align-items baseline
+        flex-wrap wrap
+        margin 0
+        padding 0
+        list-style none
+        label
+          img,
+          a
+            display none
+
+    // Stripe
+    #payment_method_stripe,
+    label[for=payment_method_stripe]
+      margin-bottom 0
+    .payment_box.payment_method_paypal
+      display none !important
+    #stripe-payment
+      flex-basis 100%
+      fieldset
+        padding 0
+        border none
+
+    #stripe-payment-data
+      > p
+        display none
+      fieldset
+        margin-top 1em
+        border 0
+        label
+          margin 0 0 0.5em
+          font-size 1.05em
+          font-weight 700
+          text-transform capitalize
+          line-height 1.5
+          cursor default
+        .required
+          display none
+
